@@ -1,0 +1,6 @@
+use_frameworks!
+target 'LotsOfExtensions_Tests' do
+  pod 'LotsOfExtensions', :path => '../'
+  
+  
+end
