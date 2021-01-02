@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LotsOfExtensions'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of LotsOfExtensions.'
+  s.version          = '1.0.0'
+  s.summary          = 'A collection of swift extensions which save your code and time.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  A collection of swift extensions which save your code and time. These extensions are frequently used in my previous works and I hope they can help you also.
                        DESC
 
-  s.homepage         = 'https://github.com/Ho Lun Wan/LotsOfExtensions'
+  s.homepage         = 'https://github.com/hlwanhoj/LotsOfExtensions'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Ho Lun Wan' => 'hlwanhoj@gmail.com' }
-  s.source           = { :git => 'https://github.com/Ho Lun Wan/LotsOfExtensions.git', :tag => s.version.to_s }
+  s.author           = { 'hlwanhoj' => 'hlwanhoj@gmail.com' }
+  s.source           = { :git => 'https://github.com/hlwanhoj/LotsOfExtensions.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'LotsOfExtensions/Classes/**/*'
+#  s.source_files = 'LotsOfExtensions/Classes/**/*'
+  
+  s.subspec 'Foundation' do |sp|
+	sp.source_files = 'LotsOfExtensions/Classes/Foundation/**/*'
+  end
   
   # s.resource_bundles = {
   #   'LotsOfExtensions' => ['LotsOfExtensions/Assets/*.png']

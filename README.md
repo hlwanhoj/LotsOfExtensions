@@ -1,6 +1,6 @@
 # LotsOfExtensions
 
-[![CI Status](https://img.shields.io/travis/Ho Lun Wan/LotsOfExtensions.svg?style=flat)](https://travis-ci.org/Ho Lun Wan/LotsOfExtensions)
+[![CI Status](https://img.shields.io/travis/hlwanhoj/LotsOfExtensions.svg?style=flat)](https://travis-ci.org/hlwanhoj/LotsOfExtensions)
 [![Version](https://img.shields.io/cocoapods/v/LotsOfExtensions.svg?style=flat)](https://cocoapods.org/pods/LotsOfExtensions)
 [![License](https://img.shields.io/cocoapods/l/LotsOfExtensions.svg?style=flat)](https://cocoapods.org/pods/LotsOfExtensions)
 [![Platform](https://img.shields.io/cocoapods/p/LotsOfExtensions.svg?style=flat)](https://cocoapods.org/pods/LotsOfExtensions)
@@ -22,7 +22,7 @@ pod 'LotsOfExtensions'
 
 ## Author
 
-Ho Lun Wan, hlwanhoj@gmail.com
+hlwanhoj, hlwanhoj@gmail.com
 
 ## License
 

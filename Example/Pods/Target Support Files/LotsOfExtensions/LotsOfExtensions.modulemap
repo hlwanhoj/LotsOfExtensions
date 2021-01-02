@@ -1,0 +1,6 @@
+framework module LotsOfExtensions {
+  umbrella header "LotsOfExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

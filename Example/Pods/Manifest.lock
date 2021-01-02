@@ -1,0 +1,25 @@
+PODS:
+  - LotsOfExtensions (1.0.0):
+    - LotsOfExtensions/Foundation (= 1.0.0)
+  - LotsOfExtensions/Foundation (1.0.0)
+  - Then (2.7.0)
+
+DEPENDENCIES:
+  - LotsOfExtensions (from `../`)
+  - Then
+
+SPEC REPOS:
+  trunk:
+    - Then
+
+EXTERNAL SOURCES:
+  LotsOfExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LotsOfExtensions: 594cc3d39579050e1c5121441d57c80fcb36a76c
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+
+PODFILE CHECKSUM: 158e714c3ee28020e0e40f22696dc879addd97f4
+
+COCOAPODS: 1.9.3
