@@ -15,5 +15,5 @@ xcode_destination: platform=iOS Simulator,OS=11.0,name=iPhone X
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
