@@ -22,6 +22,11 @@ The extensions are grouped according to their dependencies, which are
         - Anchor point snapping to `CGPoint`
         - Properties for returning the edges, e.g. `left`, `top`
         - Edge snapping to `CGFloat`
+- `UIKit`
+    - `UIEdgeInsets`
+        - Negation
+        - Convenience init which take [`EdgeInsets`](https://api.flutter.dev/flutter/painting/EdgeInsets-class.html) in Flutter as reference
+        - Properties for returning horizontal sum and vertical sum
 
 ## Requirements
 

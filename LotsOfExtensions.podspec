@@ -36,7 +36,11 @@ Pod::Spec.new do |s|
   s.subspec 'Foundation' do |sp|
 	sp.source_files = 'LotsOfExtensions/Classes/Foundation/**/*'
   end
-  
+
+  s.subspec 'UIKit' do |sp|
+  sp.source_files = 'LotsOfExtensions/Classes/UIKit/**/*'
+  end
+    
   # s.resource_bundles = {
   #   'LotsOfExtensions' => ['LotsOfExtensions/Assets/*.png']
   # }

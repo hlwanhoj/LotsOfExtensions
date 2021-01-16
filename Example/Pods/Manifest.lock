@@ -1,7 +1,9 @@
 PODS:
   - LotsOfExtensions (1.0.0):
     - LotsOfExtensions/Foundation (= 1.0.0)
+    - LotsOfExtensions/UIKit (= 1.0.0)
   - LotsOfExtensions/Foundation (1.0.0)
+  - LotsOfExtensions/UIKit (1.0.0)
   - Then (2.7.0)
 
 DEPENDENCIES:
@@ -17,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LotsOfExtensions: 484dc3600f12ab6dbe659276b90514725f498013
+  LotsOfExtensions: 9499ef48b67e5bab1d1fc0c797c741863fbcb717
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
 PODFILE CHECKSUM: 773d68a800ad1b96f158c2332f9f0fa53efade6a

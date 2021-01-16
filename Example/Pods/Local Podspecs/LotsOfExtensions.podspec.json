@@ -23,6 +23,10 @@
     {
       "name": "Foundation",
       "source_files": "LotsOfExtensions/Classes/Foundation/**/*"
+    },
+    {
+      "name": "UIKit",
+      "source_files": "LotsOfExtensions/Classes/UIKit/**/*"
     }
   ],
   "swift_version": "5.0"
