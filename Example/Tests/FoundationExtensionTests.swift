@@ -72,46 +72,92 @@ class FoundationExtensionTests: XCTestCase {
 		// Snapping
 		let rect2 = CGRect(origin: CGPoint(x: 42.6, y: -83.5), size: CGSize(width: 253.3, height: 784.2))
 		rect2.topLeft.do({
-			XCTAssertEqual($0.x, 42.6, accuracy: $0.x)
-			XCTAssertEqual($0.y, -83.5, accuracy: $0.y)
+			XCTAssertEqual($0.x, 42.6, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, -83.5, accuracy: $0.y.ulp)
+		})
+		rect2.topCenter.do({
+			XCTAssertEqual($0.x, 169.25, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, -83.5, accuracy: $0.y.ulp)
 		})
 		rect2.topRight.do({
-			XCTAssertEqual($0.x, 295.9, accuracy: $0.x)
-			XCTAssertEqual($0.y, -83.5, accuracy: $0.y)
+			XCTAssertEqual($0.x, 295.9, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, -83.5, accuracy: $0.y.ulp)
+		})
+		rect2.centerLeft.do({
+			XCTAssertEqual($0.x, 42.6, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, 308.6, accuracy: $0.y.ulp)
+		})
+		rect2.center.do({
+			XCTAssertEqual($0.x, 169.25, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, 308.6, accuracy: $0.y.ulp)
+		})
+		rect2.centerRight.do({
+			XCTAssertEqual($0.x, 295.9, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, 308.6, accuracy: $0.y.ulp)
 		})
 		rect2.bottomLeft.do({
-			XCTAssertEqual($0.x, 42.6, accuracy: $0.x)
-			XCTAssertEqual($0.y, 700.7, accuracy: $0.y)
+			XCTAssertEqual($0.x, 42.6, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, 700.7, accuracy: $0.y.ulp)
+		})
+		rect2.bottomCenter.do({
+			XCTAssertEqual($0.x, 169.25, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, 700.7, accuracy: $0.y.ulp)
 		})
 		rect2.bottomRight.do({
-			XCTAssertEqual($0.x, 295.9, accuracy: $0.x)
-			XCTAssertEqual($0.y, 700.7, accuracy: $0.y)
+			XCTAssertEqual($0.x, 295.9, accuracy: $0.x.ulp)
+			XCTAssertEqual($0.y, 700.7, accuracy: $0.y.ulp)
 		})
+		
+		XCTAssertEqual(rect2.top, -83.5, accuracy: rect2.top.ulp)
+		XCTAssertEqual(rect2.left, 42.6, accuracy: rect2.left.ulp)
+		XCTAssertEqual(rect2.bottom, 700.7, accuracy: rect2.bottom.ulp)
+		XCTAssertEqual(rect2.right, 295.9, accuracy: rect2.right.ulp)
+
 		
 		let rect3 = CGRect(origin: CGPoint(x: -842.7, y: 462.1), size: CGSize(width: 502.3, height: 32.6))
 		rect2.snapping(.bottomRight, to: rect3.topLeft).do({
 			let pt1 = $0.bottomRight
 			let pt2 = rect3.topLeft
-			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x)
-			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y)
+			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x.ulp)
+			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y.ulp)
 		})
 		rect2.snapping(.bottomLeft, to: rect3.topRight).do({
 			let pt1 = $0.bottomLeft
 			let pt2 = rect3.topRight
-			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x)
-			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y)
+			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x.ulp)
+			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y.ulp)
 		})
 		rect2.snapping(.topRight, to: rect3.bottomLeft).do({
 			let pt1 = $0.topRight
 			let pt2 = rect3.bottomLeft
-			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x)
-			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y)
+			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x.ulp)
+			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y.ulp)
 		})
 		rect2.snapping(.topLeft, to: rect3.bottomRight).do({
 			let pt1 = $0.topLeft
 			let pt2 = rect3.bottomRight
-			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x)
-			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y)
+			XCTAssertEqual(pt1.x, pt2.x, accuracy: pt1.x.ulp)
+			XCTAssertEqual(pt1.y, pt2.y, accuracy: pt1.y.ulp)
+		})
+		rect2.snapping(.top, to: rect3.bottom).do({
+			let top = $0.top
+			XCTAssertEqual(top, rect3.bottom, accuracy: top.ulp)
+			XCTAssertEqual($0.left, rect2.left, accuracy: $0.left.ulp)
+		})
+		rect2.snapping(.left, to: rect3.right).do({
+			let left = $0.left
+			XCTAssertEqual(left, rect3.right, accuracy: left.ulp)
+			XCTAssertEqual($0.top, rect2.top, accuracy: $0.top.ulp)
+		})
+		rect2.snapping(.bottom, to: rect3.top).do({
+			let bottom = $0.bottom
+			XCTAssertEqual(bottom, rect3.top, accuracy: bottom.ulp)
+			XCTAssertEqual($0.left, rect2.left, accuracy: $0.left.ulp)
+		})
+		rect2.snapping(.right, to: rect3.left).do({
+			let right = $0.right
+			XCTAssertEqual(right, rect3.left, accuracy: right.ulp)
+			XCTAssertEqual($0.top, rect2.top, accuracy: $0.top.ulp)
 		})
 	}
 }

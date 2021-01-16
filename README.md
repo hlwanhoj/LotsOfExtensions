@@ -18,7 +18,10 @@ The extensions are grouped according to their dependencies, which are
         - Negation
         - +, -, *, / with `CGFloat`
     - `CGRect`
-        - Corner snapping to another `CGRect`
+        - Properties for returning the anchor points, e.g. `topLeft`, `center`, `bottomRight`
+        - Anchor point snapping to `CGPoint`
+        - Properties for returning the edges, e.g. `left`, `top`
+        - Edge snapping to `CGFloat`
 
 ## Requirements
 
