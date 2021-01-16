@@ -39,17 +39,6 @@ class FoundationExtensionTests: XCTestCase {
 			XCTAssertEqual($0.x, -49.4, accuracy: $0.x.ulp)
 			XCTAssertEqual($0.y, 182.72, accuracy: $0.y.ulp)
 		})
-
-		// Interact with CGPoint
-		let pt2 = CGPoint(x: 418.34, y: -84.85)
-		(pt1 + pt2).do({
-			XCTAssertEqual($0.x, 294.84, accuracy: $0.x.ulp)
-			XCTAssertEqual($0.y, 371.95, accuracy: $0.y.ulp)
-		})
-		(pt1 - pt2).do({
-			XCTAssertEqual($0.x, -541.84, accuracy: $0.x.ulp)
-			XCTAssertEqual($0.y, 541.65, accuracy: $0.y.ulp)
-		})
     }
     
 	func testCGSizeExtension() {

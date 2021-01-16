@@ -29,14 +29,4 @@ public extension CGPoint {
 	static func / (left: CGPoint, right: CGFloat) -> CGPoint {
 		return left * (1.0 / right)
 	}
-
-	// Interact with CGPoint
-	
-	static func + (left: CGPoint, right: CGPoint) -> CGPoint {
-		return CGPoint(x: left.x + right.x, y: left.y + right.y)
-	}
-	
-	static func - (left: CGPoint, right: CGPoint) -> CGPoint {
-		return left + (-right)
-	}	
 }

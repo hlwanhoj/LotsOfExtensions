@@ -10,14 +10,16 @@ A collection of swift extensions which save your code and time.
 ## Features
 
 The extensions are grouped according to their dependencies, which are
-- Foundation
-    - CGPoint
-        - Math operators
-    - CGSize
-        - Math operators
-    - CGRect
-        - Math operators
+- `Foundation`
+    - `CGPoint`
+        - Negation
+        - +, -, *, / with `CGFloat`
+    - `CGSize`
+        - Negation
+        - +, -, *, / with `CGFloat`
+    - `CGRect`
         - Corner snapping to another `CGRect`
+
 ## Requirements
 
 - iOS 11.0+
