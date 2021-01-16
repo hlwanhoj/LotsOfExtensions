@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B15F3BF25A9F5B800B224F5 /* CGRect+Snapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15F3BE25A9F5B800B224F5 /* CGRect+Snapping.swift */; };
-		2B15F3C425AA1ED100B224F5 /* CGRect+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15F3C325AA1ED100B224F5 /* CGRect+Math.swift */; };
 		48B8D14DF2DBBC8CEAC20895378BB5A7 /* LotsOfExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EACE7DD29716615A67B93216CC8A3F /* LotsOfExtensions-dummy.m */; };
 		4D1052D0C7612003B733877DB3A2F841 /* CGPoint+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6048E4584DBCA46D42330F05AB1DD39E /* CGPoint+Math.swift */; };
 		4DD879A6818769AEE564B446324824BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -48,7 +47,6 @@
 		1A4C968E6AB550CB54A008C36EFC3E45 /* Pods-LotsOfExtensions_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LotsOfExtensions_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1D3A8A4D896A36B4790ADC2DDA325061 /* Pods-LotsOfExtensions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LotsOfExtensions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B15F3BE25A9F5B800B224F5 /* CGRect+Snapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGRect+Snapping.swift"; path = "LotsOfExtensions/Classes/Foundation/CGRect+Snapping.swift"; sourceTree = "<group>"; };
-		2B15F3C325AA1ED100B224F5 /* CGRect+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGRect+Math.swift"; path = "LotsOfExtensions/Classes/Foundation/CGRect+Math.swift"; sourceTree = "<group>"; };
 		2D9855BAAD20613F22AF323D0F8B7830 /* Then.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Then.release.xcconfig; sourceTree = "<group>"; };
 		2F79E5D97088726A88741FE996DF5C9B /* Pods-LotsOfExtensions_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LotsOfExtensions_Tests-Info.plist"; sourceTree = "<group>"; };
 		3196B9A903B6AA7229A42C0010E878B8 /* Pods-LotsOfExtensions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LotsOfExtensions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			children = (
 				6048E4584DBCA46D42330F05AB1DD39E /* CGPoint+Math.swift */,
 				A02973CE7135CF8E08E06388D9514112 /* CGSize+Math.swift */,
-				2B15F3C325AA1ED100B224F5 /* CGRect+Math.swift */,
 				2B15F3BE25A9F5B800B224F5 /* CGRect+Snapping.swift */,
 			);
 			name = Foundation;
@@ -419,7 +416,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1052D0C7612003B733877DB3A2F841 /* CGPoint+Math.swift in Sources */,
-				2B15F3C425AA1ED100B224F5 /* CGRect+Math.swift in Sources */,
 				9CE83327C5560152CE51EC687652ED28 /* CGSize+Math.swift in Sources */,
 				48B8D14DF2DBBC8CEAC20895378BB5A7 /* LotsOfExtensions-dummy.m in Sources */,
 				2B15F3BF25A9F5B800B224F5 /* CGRect+Snapping.swift in Sources */,

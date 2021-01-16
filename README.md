@@ -10,14 +10,19 @@ A collection of swift extensions which save your code and time.
 ## Features
 
 The extensions are grouped according to their dependencies, which are
-- Foundation
-    - CGPoint
-        - Math operators
-    - CGSize
-        - Math operators
-    - CGRect
-        - Math operators
-        - Corner snapping to another `CGRect`
+- `Foundation`
+    - `CGPoint`
+        - Negation
+        - +, -, *, / with `CGFloat`
+    - `CGSize`
+        - Negation
+        - +, -, *, / with `CGFloat`
+    - `CGRect`
+        - Properties for returning the anchor points, e.g. `topLeft`, `center`, `bottomRight`
+        - Anchor point snapping to `CGPoint`
+        - Properties for returning the edges, e.g. `left`, `top`
+        - Edge snapping to `CGFloat`
+
 ## Requirements
 
 - iOS 11.0+
