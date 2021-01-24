@@ -1,8 +1,8 @@
 {
   "name": "LotsOfExtensions",
   "version": "1.0.0",
-  "summary": "A collection of extensions which save your code and time.",
-  "description": "A collection of extensions which save your code and time. These extensions are frequently used in my previous works and I hope they can help you also.",
+  "summary": "A collection of swift extensions which save your code and time.",
+  "description": "A collection of swift extensions which save your code and time. These extensions are frequently used in my previous works and I hope they can help you also.",
   "homepage": "https://github.com/hlwanhoj/LotsOfExtensions",
   "license": {
     "type": "MIT",
@@ -16,12 +16,18 @@
     "tag": "1.0.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "11.0"
   },
+  "swift_versions": "5.0",
   "subspecs": [
     {
       "name": "Foundation",
       "source_files": "LotsOfExtensions/Classes/Foundation/**/*"
+    },
+    {
+      "name": "UIKit",
+      "source_files": "LotsOfExtensions/Classes/UIKit/**/*"
     }
-  ]
+  ],
+  "swift_version": "5.0"
 }
