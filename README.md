@@ -27,6 +27,9 @@ The extensions are grouped according to their dependencies, which are
         - Negation
         - Convenience init which take [`EdgeInsets`](https://api.flutter.dev/flutter/painting/EdgeInsets-class.html) in Flutter as reference
         - Properties for returning horizontal sum and vertical sum
+    - `UIImage`
+        - Creation from color
+        - Scaling
 
 ## Requirements
 
