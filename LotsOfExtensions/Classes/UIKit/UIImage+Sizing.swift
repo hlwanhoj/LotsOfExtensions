@@ -33,13 +33,13 @@ public extension UIImage {
 		
 	/// Return a resized image.
 	func scaled(to newSize: CGSize) -> UIImage {
-		// This is the rect that we've calculated out and this is what is actually used below
 		let rect = CGRect(origin: .zero, size: newSize)
+		UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
 
-		// Actually do the resizing to the rect using the ImageContext stuff
-		UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-		UIGraphicsGetCurrentContext()?.interpolationQuality = .high
+		let context = UIGraphicsGetCurrentContext()
+		context?.interpolationQuality = .high
 		draw(in: rect)
+
 		let newImage = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
 
