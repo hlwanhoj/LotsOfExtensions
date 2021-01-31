@@ -30,6 +30,7 @@ The extensions are grouped according to their dependencies, which are
     - `UIImage`
         - Creation from color
         - Scaling
+        - Extending the canvas
 
 ## Requirements
 
