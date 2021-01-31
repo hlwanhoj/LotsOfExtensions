@@ -10,7 +10,7 @@ branches:
 osx_image: xcode12.2
 language: swift
 xcode_workspace: Example/LotsOfExtensions.xcworkspace
-xcode_scheme: LotsOfExtensions-Example
+xcode_scheme: LotsOfExtensions-Tests
 podfile: Example/Podfile
 
 jobs:

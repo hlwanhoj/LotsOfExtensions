@@ -5,14 +5,17 @@ PODS:
   - LotsOfExtensions/Foundation (1.0.0)
   - LotsOfExtensions/UIKit (1.0.0)
   - Then (2.7.0)
+  - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
   - LotsOfExtensions (from `../`)
   - Then
+  - TinyConstraints
 
 SPEC REPOS:
   trunk:
     - Then
+    - TinyConstraints
 
 EXTERNAL SOURCES:
   LotsOfExtensions:
@@ -21,7 +24,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   LotsOfExtensions: 9499ef48b67e5bab1d1fc0c797c741863fbcb717
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 773d68a800ad1b96f158c2332f9f0fa53efade6a
+PODFILE CHECKSUM: e8afc74af6941d6b490d7f8cec846852e9623bc4
 
 COCOAPODS: 1.10.1

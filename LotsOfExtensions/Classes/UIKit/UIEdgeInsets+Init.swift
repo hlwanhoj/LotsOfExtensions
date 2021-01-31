@@ -2,7 +2,7 @@
 //  UIEdgeInsets+Init.swift
 //  LotsOfExtensions
 //
-//  Created by Ho Lun Wan on 16/1/2021.
+//  Created by hlwanhoj on 16/1/2021.
 //
 
 import UIKit
