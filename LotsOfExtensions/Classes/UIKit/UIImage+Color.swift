@@ -2,7 +2,7 @@
 //  UIImage+Color.swift
 //  LotsOfExtensions
 //
-//  Created by Ho Lun Wan on 25/1/2021.
+//  Created by hlwanhoj on 25/1/2021.
 //
 
 import UIKit
@@ -17,8 +17,8 @@ public extension UIImage {
 		
 		let rect = CGRect(origin: .zero, size: size)
 		UIGraphicsBeginImageContext(rect.size)
+		
 		let context = UIGraphicsGetCurrentContext()
-
 		context?.setFillColor(color.cgColor)
 		context?.fill(rect)
 

@@ -2,7 +2,7 @@
 //  CGPoint+Math.swift
 //  LotsOfExtensions
 //
-//  Created by Ho Lun Wan on 1/1/2021.
+//  Created by hlwanhoj on 1/1/2021.
 //
 
 import Foundation

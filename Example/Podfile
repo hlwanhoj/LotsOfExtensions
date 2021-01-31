@@ -7,3 +7,10 @@ target 'LotsOfExtensions_Tests' do
 	pod 'Then'
   
 end
+
+target 'Example' do
+  pod 'LotsOfExtensions', :path => '../'
+  pod 'Then'
+  pod 'TinyConstraints'
+  
+end

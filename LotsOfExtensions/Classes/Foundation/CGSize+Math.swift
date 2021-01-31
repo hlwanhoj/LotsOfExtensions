@@ -2,7 +2,7 @@
 //  CGSize+Math.swift
 //  LotsOfExtensions
 //
-//  Created by Ho Lun Wan on 2/1/2021.
+//  Created by hlwanhoj on 2/1/2021.
 //
 
 import Foundation

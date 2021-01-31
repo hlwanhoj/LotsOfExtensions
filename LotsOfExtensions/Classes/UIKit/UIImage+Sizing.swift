@@ -2,7 +2,7 @@
 //  UIImage+Sizing.swift
 //  LotsOfExtensions
 //
-//  Created by Ho Lun Wan on 24/1/2021.
+//  Created by hlwanhoj on 24/1/2021.
 //
 
 import UIKit
@@ -40,7 +40,7 @@ public extension UIImage {
 		context?.interpolationQuality = .high
 		draw(in: rect)
 
-		let newImage = UIGraphicsGetImageFromCurrentImageContext()
+		let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(renderingMode)
 		UIGraphicsEndImageContext()
 
 		return newImage ?? self
