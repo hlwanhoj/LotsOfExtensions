@@ -10,7 +10,7 @@ import UIKit
 public extension UIImage {
 
 	/// Return a resized image which is resized proportionally.
-	func scaled(toWidth width: CGFloat) -> UIImage {
+	func scaled(toWidth width: CGFloat) -> UIImage? {
 		let newSize: CGSize
 		if width > 0 {
 			newSize = CGSize(width: width, height: width / size.width * size.height)
@@ -21,7 +21,7 @@ public extension UIImage {
 	}
 		
 	/// Return a resized image which is resized proportionally.
-	func scaled(toHeight height: CGFloat) -> UIImage {
+	func scaled(toHeight height: CGFloat) -> UIImage? {
 		let newSize: CGSize
 		if height > 0 {
 			newSize = CGSize(width: height / size.height * size.width, height: height)
@@ -32,7 +32,7 @@ public extension UIImage {
 	}
 		
 	/// Return a resized image.
-	func scaled(to newSize: CGSize) -> UIImage {
+	func scaled(to newSize: CGSize) -> UIImage? {
 		let rect = CGRect(origin: .zero, size: newSize)
 		UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
 
@@ -44,5 +44,21 @@ public extension UIImage {
 		UIGraphicsEndImageContext()
 
 		return newImage ?? self
+	}
+
+	/// Return a image with extended canvas
+	func withCanvasExtended(to newSize: CGSize) -> UIImage? {
+		let rect = CGRect(origin: .zero, size: size)
+			.offsetBy(dx: (newSize.width - size.width) / 2, dy: (newSize.height - size.height) / 2)
+		UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
+
+		let context = UIGraphicsGetCurrentContext()
+		context?.interpolationQuality = .high
+		draw(in: rect)
+		
+		let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(renderingMode)
+		UIGraphicsEndImageContext()
+
+		return newImage
 	}
 }
