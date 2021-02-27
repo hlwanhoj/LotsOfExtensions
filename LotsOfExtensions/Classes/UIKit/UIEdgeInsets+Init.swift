@@ -8,6 +8,9 @@
 import UIKit
 
 public extension UIEdgeInsets {
+	
+	// Taking [`EdgeInsets`](https://api.flutter.dev/flutter/painting/EdgeInsets-class.html) in Flutter as reference
+	
 	/// Creates insets where all the offsets are value.
 	static func all(value: CGFloat) -> UIEdgeInsets {
 		return .init(top: value, left: value, bottom: value, right: value)
@@ -21,12 +24,6 @@ public extension UIEdgeInsets {
 	///	Creates insets with symmetrical vertical and horizontal offsets.
 	static func symmetric(vertical: CGFloat = 0, horizontal: CGFloat = 0) -> UIEdgeInsets {
 		return .init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
-	}
-
-	//
-	
-	static prefix func - (val: UIEdgeInsets) -> UIEdgeInsets {
-		return UIEdgeInsets(top: -val.top, left: -val.left, bottom: -val.bottom, right: -val.right)
 	}
 
 	//
