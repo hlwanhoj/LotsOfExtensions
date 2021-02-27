@@ -1,9 +1,9 @@
 PODS:
-  - LotsOfExtensions (1.0.0):
-    - LotsOfExtensions/Foundation (= 1.0.0)
-    - LotsOfExtensions/UIKit (= 1.0.0)
-  - LotsOfExtensions/Foundation (1.0.0)
-  - LotsOfExtensions/UIKit (1.0.0)
+  - LotsOfExtensions (1.1.0):
+    - LotsOfExtensions/Foundation (= 1.1.0)
+    - LotsOfExtensions/UIKit (= 1.1.0)
+  - LotsOfExtensions/Foundation (1.1.0)
+  - LotsOfExtensions/UIKit (1.1.0)
   - Then (2.7.0)
   - TinyConstraints (4.0.1)
 
@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LotsOfExtensions: 9499ef48b67e5bab1d1fc0c797c741863fbcb717
+  LotsOfExtensions: 8675c30ece7b481d94e86f79ad1e6475003b0a46
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
