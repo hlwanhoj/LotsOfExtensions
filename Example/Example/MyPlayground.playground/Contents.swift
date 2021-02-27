@@ -1,6 +1,7 @@
 import UIKit
 import LotsOfExtensions
 
+// Foundation
 
 // CGPoint
 
@@ -61,6 +62,15 @@ rect.snapping(.left, to: rect2.right)
 
 // Move `rect` such that it's bottom is at `rect2`'s bottom
 rect.snapping(.bottom, to: rect2.bottom)
+
+
+// Bundle
+
+
+Bundle.main.releaseVersion
+Bundle.main.buildVersion
+Bundle.main.displayName
+Bundle.main.shortName
 
 
 // UIKit

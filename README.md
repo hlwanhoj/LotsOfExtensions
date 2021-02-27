@@ -78,6 +78,16 @@ The extensions are grouped according to their dependencies, which are
         rect.snapping(.bottom, to: rect2.bottom)                    // {x 5 y 0 w 50 h 60}
         ```
 
+    - `Bundle`
+        - `Info.plist` values
+
+        ```swift
+        Bundle.main.releaseVersion                                  // returns CFBundleShortVersionString
+        Bundle.main.buildVersion                                    // returns CFBundleVersion
+        Bundle.main.displayName                                     // returns CFBundleDisplayName
+        Bundle.main.shortName                                     // returns CFBundleName
+        ```
+
 - `UIKit`
     - `UIEdgeInsets`
         - Maths
