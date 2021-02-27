@@ -29,6 +29,7 @@
 		2B592F7525C6859700CB2358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B592F7725C6859700CB2358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B592F9825C69EA700CB2358 /* UIImageCanvasExtendingTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageCanvasExtendingTestViewController.swift; sourceTree = "<group>"; };
+		2BB8342525EA4D75000B21D2 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		607FACE51AFB9204008FA782 /* LotsOfExtensions_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotsOfExtensions_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* FoundationExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensionTests.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 				2B592F7225C6859700CB2358 /* Assets.xcassets */,
 				2B592F7425C6859700CB2358 /* LaunchScreen.storyboard */,
 				2B592F7725C6859700CB2358 /* Info.plist */,
+				2BB8342525EA4D75000B21D2 /* MyPlayground.playground */,
 			);
 			path = Example;
 			sourceTree = "<group>";

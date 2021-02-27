@@ -13,45 +13,71 @@ The extensions are grouped according to their dependencies, which are
 - `Foundation`
     - `CGPoint`
         - Maths
+
         ```swift
-        -CGPoint(x: -3, y: 5)                   // = CGPoint(x: 3, y: -5)
-        CGPoint(x: -3, y: 5) + 4                // = CGPoint(x: 1, y: 9)
-        CGPoint(x: -3, y: 5) - 4                // = CGPoint(x: -7, y: 1)
-        CGPoint(x: -3, y: 5) * 3                // = CGPoint(x: -9, y: 15)
-        CGPoint(x: -3, y: 5) / 2                // = CGPoint(x: -1.5, y: 2.5)
+        -CGPoint(x: -3, y: 5)                       // {x 3 y -5}
+        CGPoint(x: -3, y: 5) + 4                    // {x 1 y 9}
+        CGPoint(x: -3, y: 5) - 4                    // {x -7 y 1}
+        CGPoint(x: -3, y: 5) * 3                    // {x -9 y 15}
+        CGPoint(x: -3, y: 5) / 2                    // {x -1.5 y 2.5}
         ```
     - `CGSize`
         - Maths
+
         ```swift
-        -CGSize(width: 20, height: 54)          // = CGSize(width: -20, height: -54)
-        CGSize(width: 20, height: 54) + 10      // = CGSize(width: 30, height: 64)
-        CGSize(width: 20, height: 54) - 10      // = CGSize(width: 10, height: 44)
-        CGSize(width: 20, height: 54) * 3       // = CGSize(width: 60, height: 162)
-        CGSize(width: 20, height: 54) / 2       // = CGSize(width: 10, height: 27)
+        -CGSize(width: 20, height: 54)              // {w -20 h -54}
+        CGSize(width: 20, height: 54) + 10          // {w 30 h 64}
+        CGSize(width: 20, height: 54) - 10          // {w 10 h 44}
+        CGSize(width: 20, height: 54) * 3           // {w 60 h 162}
+        CGSize(width: 20, height: 54) / 2           // {w 10 h 27}
         ```
     - `CGRect`
         - Anchor points, e.g. `topLeft`, `center`, `bottomRight`
+
         ```swift
         let rect = CGRect(x: 5, y: -10, width: 50, height: 60)
-        rect.topLeft                            // = CGPoint(x: 5, y: -10)
-        rect.topCenter                          // = CGPoint(x: 30, y: -10)
-        rect.topRight                           // = CGPoint(x: 55, y: -10)
-        rect.centerLeft                         // = CGPoint(x: 5, y: 20)
-        rect.center                             // = CGPoint(x: 30, y: 20)
-        rect.centerRight                        // = CGPoint(x: 55, y: 20)
-        rect.bottomLeft                         // = CGPoint(x: 5, y: 50)
-        rect.bottomCenter                       // = CGPoint(x: 30, y: 50)
-        rect.bottomRight                        // = CGPoint(x: 55, y: 50)
+        rect.topLeft                                // {x 5 y -10}
+        rect.topCenter                              // {x 30 y -10}
+        rect.topRight                               // {x 55 y -10}
+        rect.centerLeft                             // {x 5 y 20}
+        rect.center                                 // {x 30 y 20}
+        rect.centerRight                            // {x 55 y 20}
+        rect.bottomLeft                             // {x 5 y 50}
+        rect.bottomCenter                           // {x 30 y 50}
+        rect.bottomRight                            // {x 55 y 50}
         ```
         
-        - Anchor point snapping to `CGPoint`
+        - Anchor point snapping
+
         ```swift
-        let rect2 = CGRect(x: -20, y: 15, width: 75, height: 30)
-        
+        let rect2 = CGRect(x: 25, y: 40, width: 100, height: 20)
+
+        // Move `rect` such that it's top left is at `rect2`'s center
+        rect.snapping(.topLeft, to: rect2.center)           // {x 75 y 50 w 50 h 60}
+
+        // Move `rect` such that it's bottom right is at `rect2`'s center left
+        rect.snapping(.bottomRight, to: rect2.centerLeft)   // {x -25 y -10 w 50 h 60}
         ```
 
-        - Properties for returning the edges, e.g. `left`, `top`
-        - Edge snapping to `CGFloat`
+        - Edges, e.g. `left`, `top`
+
+        ```swift
+        rect.top                                    // -10
+        rect.left                                   // 5
+        rect.bottom                                 // 50
+        rect.right                                  // 55
+        ```
+
+        - Edge snapping
+
+        ```swift
+        // Move `rect` such that it's left is on `rect2`'s right
+        rect.snapping(.left, to: rect2.right)               // {x 125 y -10 w 50 h 60}
+
+        // Move `rect` such that it's bottom is at `rect2`'s bottom
+        rect.snapping(.bottom, to: rect2.bottom)            // {x 5 y 0 w 50 h 60}
+        ```
+
 - `UIKit`
     - `UIEdgeInsets`
         - Negation
