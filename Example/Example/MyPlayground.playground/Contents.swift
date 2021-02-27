@@ -61,3 +61,16 @@ rect.snapping(.left, to: rect2.right)
 
 // Move `rect` such that it's bottom is at `rect2`'s bottom
 rect.snapping(.bottom, to: rect2.bottom)
+
+
+// UIKit
+
+
+-UIEdgeInsets(top: 12, left: 6, bottom: -8, right: -10)
+UIEdgeInsets.all(value: 3)
+UIEdgeInsets.symmetric(vertical: 10)
+UIEdgeInsets.only(left: 7, bottom: 3)
+
+let insets = UIEdgeInsets(top: 12, left: 6, bottom: 8, right: 10)
+insets.horizontals
+insets.verticals
