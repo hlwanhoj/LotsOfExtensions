@@ -7,6 +7,12 @@
 
 import Foundation
 
+public extension CGSize {
+    static func square(dimension: CGFloat) -> Self {
+        return CGSize(width: dimension, height: dimension)
+    }
+}
+
 // MARK: - Math
     
 public extension CGSize {
