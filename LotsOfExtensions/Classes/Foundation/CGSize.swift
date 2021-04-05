@@ -9,7 +9,7 @@ import Foundation
 
 public extension CGSize {
     /// Creates a square Size whose width and height are the given dimension
-    static func square(dimension: CGFloat) -> Self {
+    static func square(_ dimension: CGFloat) -> Self {
         return CGSize(width: dimension, height: dimension)
     }
 }

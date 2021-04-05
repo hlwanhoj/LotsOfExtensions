@@ -21,7 +21,7 @@ CGSize(width: 20, height: 54) + 10      // = CGSize(width: 30, height: 64)
 CGSize(width: 20, height: 54) - 10      // = CGSize(width: 10, height: 44)
 CGSize(width: 20, height: 54) * 3       // = CGSize(width: 60, height: 162)
 CGSize(width: 20, height: 54) / 2       // = CGSize(width: 10, height: 27)
-
+CGSize.square(45)
 
 // CGRect
 
