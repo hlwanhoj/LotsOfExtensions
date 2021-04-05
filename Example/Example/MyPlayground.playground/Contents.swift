@@ -63,6 +63,13 @@ rect.snapping(.left, to: rect2.right)
 // Move `rect` such that it's bottom is at `rect2`'s bottom
 rect.snapping(.bottom, to: rect2.bottom)
 
+// Collection
+
+let arr = [1, 2, 3, 4]
+arr[safe: 5]
+arr[safe: -1]
+arr.safelyRemoving(at: 3)
+arr.safelyRemoving(at: 3)
 
 // Bundle
 

@@ -35,7 +35,7 @@ The extensions are grouped according to their dependencies, which are
         - Init
 
         ```swift
-        
+        CGSize.square(45)                       // {w 45 h 45}        
         ```
     - `CGRect`
         - Anchor points, e.g. `topLeft`, `center`, `bottomRight`
@@ -86,6 +86,16 @@ The extensions are grouped according to their dependencies, which are
         // Move `rect` such that it's bottom is at `rect2`'s bottom
         rect.snapping(.bottom, to: rect2.bottom)                    
         // {x 5 y 0 w 50 h 60}
+        ```
+
+    - Collection
+        - Safe access
+        ```swift
+        let arr = [1, 2, 3, 4]
+        arr[safe: 5]                // nil
+        arr[safe: -1]               // nil
+        arr.safelyRemoving(at: 3)   // [1, 2, 3]
+        arr.safelyRemoving(at: 3)   // [1, 2, 3]
         ```
 
     - `Bundle`
