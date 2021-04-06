@@ -12,7 +12,7 @@ A collection of swift extensions which save your code and time.
 The extensions are grouped according to their dependencies, which are
 - `Foundation`
     - `CGPoint`
-        - Maths
+        - Math
 
         ```swift
         -CGPoint(x: -3, y: 5)       // {x 3 y -5}
@@ -22,7 +22,7 @@ The extensions are grouped according to their dependencies, which are
         CGPoint(x: -3, y: 5) / 2    // {x -1.5 y 2.5}
         ```
     - `CGSize`
-        - Maths
+        - Math
 
         ```swift
         -CGSize(width: 20, height: 54)          // {w -20 h -54}
@@ -30,6 +30,12 @@ The extensions are grouped according to their dependencies, which are
         CGSize(width: 20, height: 54) - 10      // {w 10 h 44}
         CGSize(width: 20, height: 54) * 3       // {w 60 h 162}
         CGSize(width: 20, height: 54) / 2       // {w 10 h 27}
+        ```
+
+        - Init
+
+        ```swift
+        CGSize.square(45)                       // {w 45 h 45}        
         ```
     - `CGRect`
         - Anchor points, e.g. `topLeft`, `center`, `bottomRight`
@@ -82,6 +88,16 @@ The extensions are grouped according to their dependencies, which are
         // {x 5 y 0 w 50 h 60}
         ```
 
+    - Collection
+        - Safe access
+        ```swift
+        let arr = [1, 2, 3, 4]
+        arr[safe: 5]                // nil
+        arr[safe: -1]               // nil
+        arr.safelyRemoving(at: 3)   // [1, 2, 3]
+        arr.safelyRemoving(at: 3)   // [1, 2, 3]
+        ```
+
     - `Bundle`
         - `Info.plist` values
 
@@ -101,14 +117,14 @@ The extensions are grouped according to their dependencies, which are
 
 - `UIKit`
     - `UIEdgeInsets`
-        - Maths
+        - Math
 
         ```swift
         -UIEdgeInsets(top: 12, left: 6, bottom: -8, right: -10)     
         // {top: -12, left: -6, bottom: 8, right: 10}
         ```
 
-        - Inits
+        - Init
 
         ```swift
         UIEdgeInsets.all(value: 3)                                  

@@ -21,7 +21,7 @@ CGSize(width: 20, height: 54) + 10      // = CGSize(width: 30, height: 64)
 CGSize(width: 20, height: 54) - 10      // = CGSize(width: 10, height: 44)
 CGSize(width: 20, height: 54) * 3       // = CGSize(width: 60, height: 162)
 CGSize(width: 20, height: 54) / 2       // = CGSize(width: 10, height: 27)
-
+CGSize.square(45)
 
 // CGRect
 
@@ -63,6 +63,13 @@ rect.snapping(.left, to: rect2.right)
 // Move `rect` such that it's bottom is at `rect2`'s bottom
 rect.snapping(.bottom, to: rect2.bottom)
 
+// Collection
+
+let arr = [1, 2, 3, 4]
+arr[safe: 5]
+arr[safe: -1]
+arr.safelyRemoving(at: 3)
+arr.safelyRemoving(at: 3)
 
 // Bundle
 
